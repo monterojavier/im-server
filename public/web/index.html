@@ -1,13 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link href="styles.css" rel="stylesheet" />
     <script defer src="/bundle.js"></script>
-    <title>Document</title>
+    <title>Translate Messenger</title>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper" style="background-color: #a7333f;">
+            <a href="#!" class="brand-logo"
+              ><i class="material-icons">translate</i>Translate Messenger</a
+            >
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="material-icons">menu</i></a
+            >
+            <ul class="hide-on-med-and-down">
+              <li><a href="./pages">Github</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="github.html">Github</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="chip">
+      <img src="images/yuna.jpg" alt="Contact Person" />
+      Jane Doe
+    </div>
+
+    <div id="demopics-cards">
+      <div class="card space-between-cards">
+        <div class="card-image">
+          <img src="images/sample-1.jpg" />
+        </div>
+        <div class="card-content">
+          <p>
+            App allows for seamless text between users! Enter a username and
+            room and start communicating right away!
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="card-image">
+            <img src="images/sample-1.jpg" />
+          </div>
+          <div class="card-content">
+            <p>
+              Users can send and recieve their messages in according to their
+              preferred language.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <p>
+          I am a very simple card. I am good at containing small bits of
+          information. I am convenient because I require little markup to use
+          effectively.
+        </p>
+      </div>
+      <div class="card-tabs">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab"><a href="#test4">Test 1</a></li>
+          <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+          <li class="tab"><a href="#test6">Test 3</a></li>
+        </ul>
+      </div>
+      <div class="card-content grey lighten-4">
+        <div id="test4">Test df dsd fs sd s</div>
+        <div id="test5">
+          Tedf dsf sdf sdf sdf df sdf sf sdfrvvtybftybftybytvdctvft
+        </div>
+        <div id="test6">Test 3</div>
+      </div>
+    </div>
+    <footer class="page-footer" style="background-color: #74121d;">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">
+              You can use rows and columns here to organize your footer content.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Link 2</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Link 3</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © Made with Materialize
+          <a class="grey-text text-lighten-4 right" href="wwww.gooogle.com"
+            >More Links</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
