@@ -38,21 +38,30 @@ const createApp = () => {
     res.sendFile(path.join(__dirname, "..", "public/web"));
   });
 
+  let userLang;
   // Connecting socket. HTTP server that will take care of starting the server and handling interactions with Socket.io ( sending and recieving messages)
   io.on("connection", (socket) => {
-    socket.on("joinRoom", ({ username, room }) => {
+    socket.on("joinRoom", ({ username, room, lang }) => {
+      userLang = lang;
       const user = userJoin(socket.id, username, room);
       socket.join(user.room);
 
       // Welcome current user
-      socket.emit("message", formatMessage(botName, "Welcome to TIM!"));
+      socket.emit(
+        "message",
+        formatMessage(botName, "Welcome to TIM!", userLang)
+      );
 
       // Broadcast when a user connects
       socket.broadcast
         .to(user.room)
         .emit(
           "message",
-          formatMessage(botName, `${user.username} has joined the chat`)
+          formatMessage(
+            botName,
+            `${user.username} has joined the chat`,
+            userLang
+          )
         );
 
       // Send users and room info
@@ -66,7 +75,10 @@ const createApp = () => {
     socket.on("chatMessage", (msg) => {
       const user = getCurrentUser(socket.id);
 
-      io.to(user.room).emit("message", formatMessage(user.username, msg));
+      io.to(user.room).emit(
+        "message",
+        formatMessage(user.username, msg, userLang)
+      );
     });
 
     // Runs when client disconnects
@@ -76,7 +88,7 @@ const createApp = () => {
       if (user) {
         io.to(user.room).emit(
           "message",
-          formatMessage(botName, `${user.username} has left the chat`)
+          formatMessage(botName, `${user.username} has left the chat`, userLang)
         );
 
         // Send users and room info
