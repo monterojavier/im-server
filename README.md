@@ -2,13 +2,10 @@
 
 Messenger application that allows user to message between eachother.
 
-- Real-time (Firebase)
+- Real-time
 - Translation
 - Notifications
-- Audio
 - Add typing notification (someone is typing…)
-
-Show some pictures!!!!!
 
 ## Usage
 
@@ -16,26 +13,32 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 - Socket
 - Express
-- Material UI
-- React
-- and more
+- Materialize
+- Electron
+- Google translate api
 
-## Template place holder
+## How to use
 
-```python
-import foobar
+Need to download both repos to get to up and running. Need to get your own api key.
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+Client side:
+
+```javascript
+
+npm install && npm start
+
 ```
 
-## Contributing
+Server side:
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+```javascript
 
-Please make sure to update tests as appropriate.
+npm install && npm start-dev
 
-## License
+```
 
-[MIT](https://choosealicense.com/licenses/mit/)
+## Samples
+
+![Screenshot](img/msg1.png)
+![Screenshot](img/msg2.png)
+![Screenshot](img/msg3.png)
